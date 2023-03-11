@@ -1,0 +1,28 @@
+<!-- health.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pet Health</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('training') }}">Training & Behavior</a></li>
+          <li><a href="{{ url_for('products') }}">Products & Accessories</a></li>
+          <li><a href="{{ url_for('breeds') }}">Breeds & Types</a></li>
+          <li><a href="{{ url_for('services') }}">Pet Services</a></li>
+          <li><a href="{{ url_for('emergencies') }}">Emergencies</a></li>
+          <li><a href="{{ url_for('snl') }}">SignUp</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Cats</h1>
+      <p>Here you will find information and resources on pet health, including vaccinations, preventive care, and treatment options.</p>
+    </main>
+  </body>
+</html>

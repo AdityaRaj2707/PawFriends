@@ -1,0 +1,111 @@
+<!-- home.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Pet Care</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+  </head>
+  <body>
+    {% if name %}
+
+    <header>
+      <div class="logo"></div>
+      <nav>
+
+        <ul>
+          <li><a href="{{ url_for('health') }}">Pet Health</a></li>
+          <li><a href="{{ url_for('training') }}">Training & Behavior</a></li>
+          <li><a href="{{ url_for('products') }}">Products & Accessories</a></li>
+          <li><a href="{{ url_for('breeds') }}">Breeds & Types</a></li>
+          <li><a href="{{ url_for('services') }}">Pet Services</a></li>
+          <li><a href="{{ url_for('emergencies') }}">Emergencies</a></li>
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="{{ url_for('logout') }}">Logout</a></li>
+
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <marquee behavior="scroll" direction="left" scrollamount="20">
+        <img src="/static/styles/dog1.jpg" alt="dog care">
+        <img src="/static/styles/cat1.jpg" alt="cat care">
+        <img src="/static/styles/dog2.jpg" alt="dog care">
+        <img src="/static/styles/cat2.jpg" alt="cat care">
+      </marquee>
+      <h1> Hello
+        {{name}}
+        {% else %}
+        <header>
+          <div class="logo"></div>
+          <nav>
+    
+            <ul>
+              <li><a href="{{ url_for('health') }}">Pet Health</a></li>
+              <li><a href="{{ url_for('training') }}">Training & Behavior</a></li>
+              <li><a href="{{ url_for('products') }}">Products & Accessories</a></li>
+              <li><a href="{{ url_for('breeds') }}">Breeds & Types</a></li>
+              <li><a href="{{ url_for('services') }}">Pet Services</a></li>
+              <li><a href="{{ url_for('emergencies') }}">Emergencies</a></li>
+              <li><a href="{{ url_for('login') }}">Login</a></li>
+              <!-- <li><a href="{{ url_for('logout') }}">Logout</a></li> -->
+    
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <marquee behavior="scroll" direction="left" scrollamount="20">
+            <img src="/static/styles/dog1.jpg" alt="dog care">
+            <img src="/static/styles/cat1.jpg" alt="cat care">
+            <img src="/static/styles/dog2.jpg" alt="dog care">
+            <img src="/static/styles/cat2.jpg" alt="cat care">
+          </marquee>
+          <h1> Hello
+            Buddy!
+        {% endif %}
+        <br> Welcome to PawFriend!</h1>
+       <div class="content">
+
+              <div class="cards">
+            <div class="card">
+              <div class="container">
+                <!-- <img src="cat-icon.png" alt="Cat Icon"> -->
+                <h2>Cats</h2>
+                <p class="p1">Learn all about caring for your feline friend. From feeding to grooming, we provide all the information you need to keep your cat happy and healthy.</p>
+                <a href=#"learnmore_cats.html" class="btn">Learn More</a>
+              </div>
+            </div>
+            <div class="card">
+              <div class="container">
+                <!-- <img src="dog-icon.png" alt="Dog Icon"> -->
+                <h2>Dogs</h2>
+                <p>Discover the best ways to care for your canine companion. From training to health, we provide all the information you need to keep your dog happy and healthy.</p>
+                <a href=#"learnmore_dogs.html" class="btn">Learn More</a>
+              </div>
+            </div>
+          </div>
+          <div class="texts">
+            <p>We provide pet owners with all the necessary information regarding their pets. From vaccinations to pet care tips, we have got you covered. Currently, we focus on cats and dogs.</p>
+      
+              </div>
+       </div>
+    </main>
+
+  </body>
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2023 PawFriend</p>
+      <nav>
+        <ul>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    
+  </footer>
+  
+  
+</html>

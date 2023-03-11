@@ -1,0 +1,123 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Register </title>
+	</head>
+	<body></br></br></br></br></br>
+		<div align="center">
+		<div align="center" class="border">
+			<div class="header">
+				<h1 class="word">REGISTER HERE!</h1>
+			</div></br></br></br>
+			<h2 class="word">
+				<form action="{{ url_for('register') }}" method="post">
+				<div class="msg">{{ msg }}</div>
+					<input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox"/></br></br>
+					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox"/></br></br>
+					<input id="email" name="email" type="text" placeholder="Enter Your Email ID" class="textbox"/></br></br>
+					<input id="pettype" name="pettype" type="text" placeholder="Enter Your Pet's Type" class="textbox"/></br></br>
+					<input id="petname" name="petname" type="text" placeholder="Enter Your Pet's Name" class="textbox"/></br></br>
+					<input id="breed" name="breed" type="text" placeholder="Enter Your Pet's Breed" class="textbox"/></br></br>
+					<input id="dob" name="dob" type="date" placeholder="Enter Your Pet's Date of Birth" class="textbox"/></br></br>
+					<input type="submit" class="btn" value="Sign Up"></br>
+				</form>
+			</h2>
+			<p class="Acc">Already have an account? 
+                <a class="bottom" href="{{url_for('login')}}"> Login</a>
+            </p>
+		</div>
+		</div>
+        <style>
+            
+            body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url(static/styles/puppy.webp) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+    background-position: center;
+
+
+}
+
+.border {
+border: 2px solid #ffffff;
+padding: 20px;
+border-radius: 10px;
+width: 400px;
+background-color: rgba(0, 0, 0, 0.408);
+margin-top: -30px;
+margin-left: -650px;
+}
+
+
+/* .header {
+    padding: 5px 120px;
+    width: 150px;
+    height: 70px;
+    background-color: #236B8E;
+   
+
+} */
+
+.word {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 20px;
+color: #ffffff;
+text-align: center;
+font-weight: bolder;
+margin-top: 10px;
+
+}
+.msg {
+    color: #f00;
+    margin-bottom: 10px;
+}
+
+.textbox {
+width: 300px;
+height: 35px;
+border-radius: 5px;
+border: none;
+margin-bottom: 5px;
+padding: 5px;
+}
+
+.btn {
+    background-color: #ffa407;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #030303;
+    
+   
+   
+}
+.bottom {
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+color: #f2f6f6;
+text-align: center;
+
+}
+.Acc{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    
+    text-align: center;
+    margin-bottom: 7px;
+    color: black;
+    
+}
+        </style>
+	</body>
+</html>
+
+

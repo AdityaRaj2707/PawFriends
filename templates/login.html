@@ -1,0 +1,101 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title> Login </title>
+		<!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles/login1.css') }}">	 -->
+		<style>
+              body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url(static/styles/puppy.webp) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+ 
+    background-position: center;
+
+}
+
+.border {
+    background-color: #06050572;
+    border-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 10px;
+    box-shadow: 0 5 10px rgba(0, 0, 0, 0.615);;
+    padding: 40px;
+    margin-top: 200px;
+    max-width: 400px;
+    max-height: 100%;
+    margin-left: -600px;
+    
+
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.word {
+    font-size: 28px;
+    color: white;
+}
+
+.textbox {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #ffa407;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #101010;
+}
+
+.msg {
+    color: #f00;
+    margin-bottom: 10px;
+}
+
+.bottom {
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+}
+
+.bottom a {
+    color: #fff2f2;
+}
+
+        </style>
+	</head>
+	<body>
+		<div align="center">
+			<div class="border">
+				<div class="header">
+					<h1 class="word">Login</h1>
+				</div>
+				<form action="{{ url_for('login') }}" method="post">
+					<div class="msg">{{ msg }}</div>
+					<input id="username" name="username" type="text" placeholder="Enter Your Username" class="textbox">
+					<input id="password" name="password" type="password" placeholder="Enter Your Password" class="textbox">
+					<input type="submit" class="btn" value="Log In">
+				</form>
+				<p class="bottom">Don't have an account? <a class="bottom" href="{{url_for('register')}}"> Sign Up here</a></p>
+			</div>
+		</div>
+	</body>
+</html>
