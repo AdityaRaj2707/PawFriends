@@ -1,0 +1,36 @@
+.style{
+    justify-content: center;
+    font-weight: 600;
+    display: grid;
+    grid-template-rows: 50px 60px 50px;
+    margin-top: auto;
+    margin-left: 40vh;
+    margin-top: 35vh;
+    display: inline-block;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 3px;
+    border-color: gray;
+    background-color: rgb(228, 240, 236);
+}
+.pass{
+    font-weight: 600;
+    display: block;
+}
+.button{
+    color: green;
+    margin-left: 100px;
+    padding: 4px;
+    border-radius: 3px;
+    font-weight: 600;
+    background-color: bisque;
+
+}
+button:hover,button:active{
+    color:  bisque;
+    margin-left: 100px;
+    border-radius: 3px;
+    font-weight: 600;
+    background-color: green;
+    transition: .2s;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Grid</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel = "stylesheet" href = "style_product.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style_product.css') }}">
+</head>
+<body>
+    <div class = "wrapper">
+        <div class = "container">
+            <div class = "title">
+                
+                <h1>PRODUCTS AND ACCESSORIES</h1>
+            </div>
+            <div class="cart-container">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count">0</span>
+                <div class="cart-dropdown">
+                    <div class="cart-items"></div>
+                    <div class="cart-total">
+                        <span>Total:</span>
+                        <span class="total-price">₹0</span>
+                    </div>
+                    <button class="checkout-btn">Checkout</button>
+                </div>
+            </div>
+            <div class = "product">
+                <div class = "product-container">
+                    <div class = "product-item">
+                        <div class = "product-img">
+                            <img src = "http://petcarecenterpashan.com/images/services/59.png" alt = "book image">
+                            <div>
+                                <button class="add-btn" data-item="Pet Toys" data-price="250">Add to cart</button>
+
+                            </div>
+                        </div>
+                        <div class = "product-content">
+                            <a href = "#" class = "book-title">Pet Toys </a>
+                            
+                            <div>
+                                
+                                <span class = "price">₹ 250</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "product-item">
+                        <div class = "product-img">
+                            <img src = "https://www.akc.org/wp-content/uploads/2019/06/Top-Travel-Products-for-Dogs.jpg" alt = "book image">
+                            <div>
+                                <button class="add-btn" data-item="Pet Travelling Combo" data-price="3000">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class = "product-content">
+                            <a href = "#" class = "book-title">Pet Travelling Combo </a>
+                            
+                            <div>
+                                
+                                <span class = "price">₹ 3000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "product-item">
+                        <div class = "product-img">
+                            <img src = "https://img1.exportersindia.com/product_images/bc-full/dir_110/3290573/pet-care-1488366.jpg" alt = "book image">
+                            <div>
+                                <button class="add-btn" data-item="Dog Food and Toys Combo" data-price="1500">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class = "product-content">
+                            <a href = "#" class = "book-title">Dog Food and Toys Combo</a>
+                            
+                            <div>
+                                
+                                <span class = "price">₹ 1500</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "product-item">
+                        <div class = "product-img">
+                            <img src = "https://m.media-amazon.com/images/I/81rLhlxO+xL._SX522_.jpg" alt = "book image">
+                            <div>
+                                <button class="add-btn" data-item="Dog Birthday Caps" data-price="200">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class = "product-content">
+                            <a href = "#" class = "book-title"> Dog Birthday Caps </a>
+                            
+                            <div>
+                                
+                                <span class = "price">₹ 200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "product-item">
+                        <div class = "product-img">
+                            <img src = "https://rukminim1.flixcart.com/image/416/416/l3khsi80/pet-health-supplement/j/4/q/600-skyec-combo-of-3-star-coat-and-petup-pro-and-skycal-200ml-original-imagenvhhckxfkzz.jpeg?q=70" alt = "book image">
+                            <div>
+                                <button class="add-btn" data-item="GLOBE OF PETS COMBO OF 3 STAR COAT AND PET UP PRO AND SKY CAL 200ML EACH Pet Health Supplements" data-price="650">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class = "product-content">
+                            <a href = "#" class = "book-title">GLOBE OF PETS COMBO OF 3 STAR COAT AND PET UP PRO AND SKY CAL 200ML EACH Pet Health Supplements  (600 ml) </a>
+                            
+                            <div>
+                                
+                                <span class = "price">₹ 650</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "product-item">
+                        <div class = "product-img">
+                            <img src = "https://www.thesprucepets.com/thmb/luqw5cJZixhpXWMquh_D_f9RNP0=/fit-in/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Furbo-Dog-Camera-9d89db154c494856a09b33062756666d.jpg" alt = "book image">
+                            <div>
+                                <button class="add-btn" data-item="Furbo 360° Dog Camera " data-price="4000">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class = "product-content">
+                            <a href = "#" class = "book-title">Furbo 360° Dog Camera </a>
+                        
+                            <div>
+                                
+                                <span class = "price">₹ 4000</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "product-item">
+                        <div class = "product-img">
+                            <img src = "https://cdn.shopify.com/s/files/1/0558/8497/2240/products/RELIFLAMSPRAY_TOPICUREPET-ForDog_Cat_720x.jpg?v=1653978313" alt = "book image">
+                            <div>
+                                <button class="add-btn" data-item="Dog and Cat Shampoo" data-price="200">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class = "product-content">
+                            <a href = "#" class = "book-title">Dog and Cat Shampoo</a>
+                            <p class = "author"> <span>Combo of 2</span></p>
+                            <div>
+                                
+                                <span class = "price">₹ 200</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "product-item">
+                        <div class = "product-img">
+                            <img src = "https://m.media-amazon.com/images/I/81BByMM7mvL._AC_SX679_.jpg" alt = "book image">
+                            <div>
+                                <button class="add-btn" data-item="3 Piece Set of Recordable Speech Buttons for Dogs, Dog Buttons for Communication" data-price="900">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class = "product-content">
+                            <a href = "#" class = "book-title">3 Piece Set of Recordable Speech Buttons for Dogs, Dog Buttons for Communication </a>
+                            
+                            <div>
+                                
+                                <span class = "price">₹ 900</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "product-item">
+                        <div class = "product-img">
+                            <img src = "https://cdn.shopify.com/s/files/1/1199/8502/products/G-3_1024x1024_2x_8f3f0369-6fee-41b8-956d-1802f6d158eb.jpg?v=1609580620" alt = "book image">
+                            <div>
+                                <button class="add-btn" data-item="Dog Toy" data-price="150">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class = "product-content">
+                            <a href = "#" class = "book-title">Dog Toy </a>
+                            
+                            <div>
+                                
+                                <span class = "price">₹ 150</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class = "product-item">
+                        <div class = "product-img">
+                            <img src = "https://t2.gstatic.com/images?q=tbn:ANd9GcRccfzruyTtXUYYDZM7Ul9th9jDOv8w_uA6lyetdM_7dCEnMy8q" alt = "book image">
+                            <div>
+                                <button class="add-btn" data-item="Frisco Foldable Nonslip Cat & Dog Stairs" data-price="1000">Add to cart</button>
+                            </div>
+                        </div>
+                        <div class = "product-content">
+                            <a href = "#" class = "book-title">Frisco Foldable Nonslip Cat & Dog Stairs </a>
+                            
+                            <div>
+                                
+                                <span class = "price">₹ 1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{{url_for('static', filename='styles/script.js')}}"></script>
+
+</body>
+</html>

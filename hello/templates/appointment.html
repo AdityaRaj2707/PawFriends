@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pet Health Appointment Form</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+	<style>
+		#appt{
+			margin-top: 20px;
+			width: 60%;
+			color: white;
+		}
+		h2{
+			text-align: center;
+			margin-top: 50px;
+			color: beige;
+		}
+
+	</style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+          <li><a href="{{ url_for('training') }}">Training & Behavior</a></li>
+          <li><a href="{{ url_for('products') }}">Products & Accessories</a></li>
+          <li><a href="{{ url_for('breeds') }}">Breeds & Types</a></li>
+          <!-- <li><a href="{{ url_for('services') }}">Pet Services</a></li> -->
+          <li><a href="{{ url_for('emergencies') }}">Emergencies</a></li>
+        </ul>
+      </nav>
+    </header>
+	<h2>Pet Health Appointment Form</h2>
+<div class="container" id="appt">
+	<form method="post">
+		<div class="form-group">
+			<label for="petName">Pet Name:</label>
+			<input type="text" class="form-control" id="petName" placeholder="Enter Pet Name" name="petName">
+		</div>
+		<div class="form-group">
+			<label for="ownerName">Owner Name:</label>
+			<input type="text" class="form-control" id="ownerName" placeholder="Enter Owner Name" name="ownerName">
+		</div>
+		<div class="form-group">
+			<label for="pasw">Password:</label>
+			<input type="password" class="form-control" id="pasw" placeholder="Enter your Password" name="pasw">
+		</div>
+		<div class="form-group">
+			<label for="email">Email:</label>
+			<input type="email" class="form-control" id="email" placeholder="Enter Email" name="email">
+		</div>
+		<div class="form-group">
+			<label for="phone">Phone:</label>
+			<input type="text" class="form-control" id="phone" placeholder="Enter Phone Number" name="phone">
+		</div>
+		<div class="form-group">
+			<label for="date">Appointment Date:</label>
+			<input type="date" class="form-control" id="date" name="date">
+		</div>
+		<div class="form-group">
+			<label for="time">Appointment Time:</label>
+			<input type="time" class="form-control" id="time" name="time">
+		</div>
+		<div class="form-group">
+			<label for="doctor">Doctor:</label>
+			<select class="form-control" id="doctor" name="doctor">
+				<option>Dr. Aditya Raj</option>
+				<option>Dr. Uday Shetty</option>
+				<option>Dr. Ghuri</option>
+				<option>Dr. Sarah Lee</option>
+			</select>
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+	</form>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Doctor's Appointment Management</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}"> -->
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="{{ url_for('home') }}">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+	<style>
+		body{
+			background-color: black;
+		}
+		.container{
+			margin-top: 70px;
+		}
+		nav{
+			background-color: blueviolet;
+			height: 44px;
+		}
+		nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    float: left;
+  }
+  
+  nav a {
+    display: block;
+    color: white;
+    background-color: rgb(63 41 112);
+    text-decoration: none;
+    padding: 10px;
+  }
+  
+  nav a:hover {
+    background-color: #7027d5;
+    color: black;
+  }
+  .container{
+	color: beige;
+  }
+  tr{
+	color: beige;
+  }
+	</style>
+<div class="container">
+	<h2>Doctor's Appointment Management : {{ name }}</h2>
+	<table class="table">
+		<thead>
+			<tr>
+				<th>Pet Name</th>
+				<th>Owner Name</th>
+				<th>Email</th>
+				<th>Phone</th>
+				<th>Date</th>
+				<th>Time</th>
+				<!-- <th>Doctor</th> -->
+			</tr>
+		</thead>
+		<tbody>
+            <!-- {{ appointments }} -->
+			{% for appointment in appointments %}
+			<tr>
+				<td>{{ appointment['pet_name'] }}</td>
+				<td>{{ appointment['owner_name'] }}</td>
+				<td>{{ appointment['email'] }}</td>
+                <td>{{ appointment['phone'] }}</td>
+				<td>{{ appointment['appointment_date'] }}</td>
+				<td>{{ appointment['appointment_time'] }}</td>
+				<!-- <td>{{ appointment[6] }}</td> -->
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+</div>
+
+</body>
+</html>

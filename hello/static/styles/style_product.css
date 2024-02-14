@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fef4f4;
+}
+
+.wrapper {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.title {
+  margin-top: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 3px;
+  width: 200px;
+  background-color: #000;
+}
+
+.title h1 {
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.cart {
+  display: flex;
+  background-color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7px 10px;
+  border-radius: 3px;
+  width: 80px;
+}
+
+.cart-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.cart-count {
+  display: inline-block;
+  margin-left: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #f00;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+}
+
+.product {
+  margin: 3rem 0;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  transition: all 0.4s ease;
+}
+
+.product-item {
+  width: calc(20% - 16px);
+  margin: 8px;
+  background-color: #fff;
+  max-width: 300px;
+}
+
+.product-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-item img {
+  width: 100%;
+  display: block;
+}
+
+.product-img div {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  width: 100%;
+  padding: 0.8rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.add-btn {
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #f2a80b;
+  color: #f2a80b;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.product-img:hover div {
+  transform: translateY(0);
+}
+
+.product-content {
+  padding: 0.5rem 1rem;
+  transition: all 0.4s ease;
+}
+
+.book-title {
+  display: block;
+  font-weight: 700;
+  color: #000;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 0.2rem 0;
+}
+
+.author {
+font-size: 0.8rem;
+font-weight: 300;
+color: #555;
+}
+
+.price {
+margin-top: 0.5rem;
+font-size: 1.2rem;
+font-weight: 500;
+color: #f2a80b;
+}
+
+.product-item:hover .product-content {
+background-color: #fef4f4;
+}
+
+@media screen and (max-width: 1024px) {
+.product-item {
+width: calc(25% - 16px);
+}
+}
+
+@media screen and (max-width: 768px) {
+.product-item {
+width: calc(33.33% - 16px);
+}
+}
+
+@media screen and (max-width: 576px) {
+.product-item {
+width: calc(50% - 16px);
+}
+}
+
+@media screen and (max-width: 400px) {
+.product-item {
+width: 100%;
+margin: 8px 0;
+}
+}
+
+.footer {
+background-color: #333;
+color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 5rem;
+}
+
+.footer p {
+font-size: 1rem;
+}
+
+.footer a {
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+transition: all 0.3s ease;
+}
+
+.footer a:hover {
+color: #f2a80b;
+}
+
+/* Styles for the cart modal */
+
+.cart-modal {
+background-color: rgba(0, 0, 0, 0.5);
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 9999;
+}
+
+.cart-modal-container {
+background-color: #fff;
+max-width: 600px;
+width: 100%;
+padding: 1rem;
+border-radius: 5px;
+position: relative;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.close-btn {
+position: absolute;
+top: 1rem;
+right: 1rem;
+font-size: 1.5rem;
+color: #333;
+cursor: pointer;
+}
+
+.cart-modal-content {
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 100%;
+padding: 1rem 0;
+}
+
+.cart-item {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 0.5rem 0;
+width: 100%;
+}
+
+.cart-item img {
+width: 50px;
+height: 50px;
+object-fit: cover;
+margin-right: 1rem;
+}
+
+.cart-item h4 {
+font-size: 1rem;
+font-weight: 500;
+margin-right: auto;
+}
+
+.cart-item p {
+font-size: 0.9rem;
+font-weight: 300;
+}
+
+.cart-total {
+margin-top: 1rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+.cart-total h4 {
+font-size: 1.2rem;
+font-weight: 500;
+}
+
+.cart-total p {
+font-size: 1.2rem;
+font-weight: 500;
+color: #f2a80b;
+}
+
+.checkout-btn {
+margin-top: 1rem;
+padding: 0.5rem 1rem;
+background-color: #f2a80b;
+color: #fff;
+font-size: 1rem;
+font-weight: bold;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+.checkout-btn:hover {
+background-color: #fff;
+color: #f2a80b;
+}
+
+.cart-container {
+  position: absolute;
+  top: 55px; 
+  right: 60px; 
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.fas.fa-shopping-cart {
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.cart-dropdown {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 300px;
+  background-color: #fff;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.cart-dropdown:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.cart-dropdown .cart-items {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.cart-dropdown .cart-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+.cart-dropdown .cart-total span:first-child {
+  font-weight: bold;
+}
+
+.cart-dropdown .total-price {
+  font-weight: bold;
+}
+
+.checkout-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.cart-container:hover .cart-dropdown {
+  display: block;
+}
